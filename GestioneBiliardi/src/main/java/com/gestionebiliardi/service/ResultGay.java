@@ -19,9 +19,9 @@ public class ResultGay {
 		
 		int result = (int) (Math.random()*10);
 		if(result <= 5){
-			return "Valerio";
+			return "Marzio";
 		}else{
-			return "Vittorio";
+			return "Tullio";
 		}
 	}
 }

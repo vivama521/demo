@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -7,6 +7,6 @@
 <title>Risultato</title>
 </head>
 <body>
-<h1>In questo momento sento che è piu' gay ${name}</h1>
+<h1>In verità il piu' gay di tutti è sempre ${name}</h1>
 </body>
 </html>
