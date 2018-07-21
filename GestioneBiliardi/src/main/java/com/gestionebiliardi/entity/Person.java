@@ -17,6 +17,7 @@ public class Person implements Serializable {
 	@Column(name="id_person")
 	private int idPerson;
 
+	@Column(name="name")
 	private String name;
 
 	@Column(name="second_name")
