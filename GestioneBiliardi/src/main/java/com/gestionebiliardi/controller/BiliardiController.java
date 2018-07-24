@@ -19,7 +19,7 @@ public class BiliardiController {
 	
 	@RequestMapping("/")
 	public ModelAndView hello(){
-		String message = "Chi è piu' gay tra Valerio e Vittorio?";
+		String message = "Chi è piu' gay tra Valerio , Vittorio e Marzio?";
 		logger.debug("Message: " + message);
 		return new ModelAndView("hello","message", message);
 		

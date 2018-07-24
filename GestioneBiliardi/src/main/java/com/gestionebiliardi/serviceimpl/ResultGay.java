@@ -30,9 +30,11 @@ public class ResultGay {
 	public String getGayOfTheMoment(){
 		
 		int result = (int) (Math.random()*10);
-		if(result <= 5){
+		if(result < 5){
 			name = env.getProperty("valerio.gay");
-		}else{
+		}else if(result >5){
+			name = env.getProperty("marzio.gay");
+		}else  if(result ==5) {
 			name = env.getProperty("vittorio.gay");
 		}
 		return personService.getPersonByName(name).getName();
