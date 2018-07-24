@@ -9,6 +9,7 @@
 </head>
 <body>
 
-<h1>${message} <a href="/linkGay">scopri...</a></h1>
+<h1>${messaggi.get("message")} <a href="/linkGay">scopri...</a></h1>
+<h1>${messaggi.get("message2")} <a href="/ProvaFindAll">prova...</a></h1>
 </body>
 </html>
