@@ -7,6 +7,11 @@
 <title>Risultato</title>
 </head>
 <body>
-<h1>In verità il piu' gay di tutti è sempre ${name}</h1>
+<h1>Lista dei nomi presenti in tabella </h1>
+<br>
+<p>${listaNomi.get(0)}</p>
+<p>${listaNomi.get(1)}</p>
+<p>${listaNomi.get(2)}</p>
+
 </body>
 </html>
