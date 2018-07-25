@@ -1,9 +1,7 @@
 package com.gestionebiliardi.controller;
 
 import com.gestionebiliardi.entity.Person;
-import com.gestionebiliardi.jparepo.PersonRepo;
 import com.gestionebiliardi.service.PersonService;
-import com.gestionebiliardi.serviceimpl.PersonServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +20,9 @@ import java.util.Map;
 public class BiliardiController {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	PersonService personService;
 	
 	@Autowired
 	private ResultGay resultGay;
@@ -47,12 +48,11 @@ public class BiliardiController {
 		
 	}
 
-    @RequestMapping("/ProvaFindAll")
+    @RequestMapping("/provaFindAll")
     public ModelAndView provaFindAll(){
-        ArrayList<String> listaNomi= new ArrayList<String>();
+        List<String> listaNomi= new ArrayList<>();
         List<Person> listPerson = new ArrayList<>();
-        PersonService personRepo= new PersonServiceImpl();
-        listPerson=personRepo.getAllPerson();
+        listPerson = personService.getAllPerson();
         listPerson.forEach(e -> listaNomi.add(e.getName()+" "+e.getSecondName()));
         return new ModelAndView("listaNomi","listaNomi", listaNomi);
 

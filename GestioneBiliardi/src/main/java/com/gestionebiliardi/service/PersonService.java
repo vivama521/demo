@@ -9,6 +9,6 @@ public interface PersonService {
 	List<Person> getAllPerson();
     Person getPersonById(long idPerson);
     void updatePerson(Person person);
-    void deletePerson(int idPerson);
+    void deletePersonById(int idPerson);
     Person getPersonByName(String name);
 }

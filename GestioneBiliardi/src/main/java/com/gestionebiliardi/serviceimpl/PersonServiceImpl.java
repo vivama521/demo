@@ -31,13 +31,11 @@ public class PersonServiceImpl implements PersonService{
 	@Override
 	public void updatePerson(Person person) {
 		personRepo.save(person);
-		
 	}
 
 	@Override
-	public void deletePerson(int idPerson) {
+	public void deletePersonById(int idPerson) {
 		personRepo.delete(getPersonById(idPerson));
-		
 	}
 
 	@Override
