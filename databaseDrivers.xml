@@ -38,7 +38,7 @@
       <option name="auto-sync" value="true" />
     </driver>
     <driver id="mysql">
-      <url-template name="default" template="jdbc:mysql://{host::localhost}?[:{port::3306}][/{dbprova}?][\?&lt;&amp;,user={root},password={root},{:identifier}={:identifier}&gt;]" />
+      <url-template name="default" template="jdbc:mysql://{host::localhost}?[:{port::3306}][/{db}?][\?&lt;&amp;,user={user},password={password},{:identifier}={:identifier}&gt;]" />
       <artifact name="MySQL Connector/J" use="true" version="5.1.46" />
       <option name="auto-sync" value="true" />
       <option name="auto-commit" value="true" />
