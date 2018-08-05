@@ -1,7 +1,11 @@
 package com.gestionebiliardi.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
-import javax.persistence.*;
 
 
 /**
@@ -9,7 +13,6 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
 public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -18,8 +21,12 @@ public class Person implements Serializable {
 	private int idPerson;
 
 	@Column(name="name")
+	@NotNull(message = "NOME è un campo obbligatorio")
+	@Size(min = 2, max = 45, message = "NOME è troppo lungo. Max: 45")
 	private String name;
 
+	@NotNull(message = "COGNOME è un campo obbligatorio")
+	@Size(min = 2, max = 45, message = "COGNOME è troppo lungo. Max: 45")
 	@Column(name="second_name")
 	private String secondName;
 
